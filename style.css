@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "nunito", sans-serif;
+  display: flex;
+}
+
+.page {
+  display: flex;
+  width: 1920px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 80px;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.open-msg {
+  margin-top: 265px;
+}
+
+.page-input {
+  background-color: #fd5334;
+  width: 997px;
+  padding-left: 85px;
+}
+.page-photo {
+  height: 1196px;
+  width: 923px;
+}
+
+.button {
+  width: 191px;
+  height: 53px;
+  font-family: "Open Sans";
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #212529;
+  border: none;
+  line-height: 27px;
+  border-radius: 8px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#start-btn {
+  margin-top: 102px;
+}
+
+.page-1 {
+  opacity: 100;
+}
+
+.page-2 {
+  color: black;
+  font-size: 50px;
+  margin-left: -1920px;
+}
+
+.hidden {
+  display: none;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 35px;
+  color: #212529;
+}
+.img-box {
+  width: 923px;
+  background-image: url(../Photos/second-page.png);
+}
