@@ -125,7 +125,7 @@ h2 {
 h3 {
   font-size: 22px;
   font-family: "Open Sans" sans-serif;
-  margin-top: 80px;
+  margin-top: 70px;
   color: black;
 }
 
@@ -147,4 +147,47 @@ h3 {
   height: 25px;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+
+.back {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  width: 90px;
+  height: 45px;
+  font-size: 15px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.input-group input {
+  display: block;
+  width: 600px;
+  border: none;
+  height: 40px;
+}
+
+.input-group i {
+  position: absolute;
+  right: 300px;
+  top: 12px;
+  visibility: hidden;
+}
+.form {
+  margin-top: 60px;
+}
+
+.error input {
+  background-color: #fbebeb;
+}
+
+.success input {
+  background-color: #e5e6e8;
+}
+.success i.fa-circle-check {
+  visibility: visible;
+  color: green;
 }

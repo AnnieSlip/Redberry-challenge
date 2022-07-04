@@ -17,6 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Cormorant+Garamond:ital@1&family=Grape+Nuts&family=Josefin+Sans:wght@300;400&family=Quicksand&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
  
  <!--Second page of the App-->
@@ -49,7 +51,8 @@
       <h3>Personal Information</h3>
       <p>This is Basic Information Fields</p>
      
-      <form>
+      <form class="form" id="personal-info-form">
+        <div class="input-group">
         <input
           type="text"
           name="name"
@@ -57,6 +60,10 @@
           required
           placeholder="Name*"
         />
+        <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="input-group">
         <input
           type="email"
           name="email"
@@ -64,7 +71,10 @@
           required
           placeholder="Email adress*"
         />
+        <i class="fa-solid fa-circle-check"></i>
+        </div>
 
+        <div class="input-group">
         <input
           type="number"
           name="number"
@@ -72,7 +82,11 @@
           required
           placeholder="Phone number*"
         />
+        <i class="fa-solid fa-circle-check"></i>
+        </div>
 
+
+        <div class="input-group">
         <input
           type="date"
           id="start"
@@ -81,7 +95,12 @@
           min="2018-01-01"
           max="2018-12-31"
         />
+        <i class="fa-solid fa-circle-check"></i>
+        </div>
       </form>
+      <div class="buttons">
+        <a href="index.html" class="back">Back</a>
+      </div>
     </div>
     </div>
   </div>
