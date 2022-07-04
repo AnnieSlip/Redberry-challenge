@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -12,6 +12,19 @@ body {
 .page {
   display: flex;
   width: 1920px;
+  height: 1080px;
+}
+
+header {
+  display: flex;
+  background-color: #7025fb;
+  height: 60px;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-img {
+  height: 20px;
 }
 
 h1 {
@@ -25,13 +38,15 @@ h1 {
   margin-top: 265px;
 }
 
+.content {
+  width: 997px;
+}
 .page-input {
   background-color: #fd5334;
-  width: 997px;
   padding-left: 85px;
 }
 .page-photo {
-  height: 1196px;
+  height: 1020px;
   width: 923px;
 }
 
@@ -76,5 +91,34 @@ h2 {
 }
 .img-box {
   width: 923px;
+  height: 1080px;
   background-image: url(../Photos/second-page.png);
+}
+
+.description {
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  color: #e5e6e8;
+  margin-top: 20px;
+}
+
+.quotation {
+  margin-top: 250px;
+  margin-left: 130px;
+}
+
+.page-name {
+  font-family: "Open sans", sans-serif;
+  font-size: 16px;
+  display: block;
+  box-shadow: 0 1.5px 2px -2px gray;
+  height: 60px;
+  padding-left: 50px;
+  padding-top: 20px;
+  font-weight: 600;
+}
+
+form {
+  z-index: 1000;
 }
