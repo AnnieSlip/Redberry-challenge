@@ -181,7 +181,7 @@ h3 {
 }
 
 .error input {
-  background-color: #fbebeb;
+  background-color: #f9dede;
 }
 
 .success input {
@@ -190,4 +190,21 @@ h3 {
 .success i.fa-circle-check {
   visibility: visible;
   color: green;
+}
+
+.buttons {
+  display: flex;
+  position: relative;
+}
+
+.btn {
+  position: absolute;
+  top: 775px;
+  right: -70px;
+  width: 100px;
+  height: 45px;
+  background-color: #212529;
+  color: #fbebeb;
+  border-radius: 8px;
+  cursor: pointer;
 }
