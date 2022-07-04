@@ -50,9 +50,10 @@ h1 {
   width: 923px;
 }
 
-.button {
-  width: 191px;
-  height: 53px;
+a {
+  display: block;
+  width: 190px;
+  height: 50px;
   font-family: "Open Sans";
   font-size: 20px;
   color: #ffffff;
@@ -62,10 +63,10 @@ h1 {
   border-radius: 8px;
   position: absolute;
   cursor: pointer;
-}
-
-#start-btn {
-  margin-top: 102px;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px;
+  margin-top: 100px;
 }
 
 .page-1 {
@@ -75,11 +76,6 @@ h1 {
 .page-2 {
   color: black;
   font-size: 50px;
-  margin-left: -1920px;
-}
-
-.hidden {
-  display: none;
 }
 
 h2 {
@@ -119,6 +115,36 @@ h2 {
   font-weight: 600;
 }
 
-form {
-  z-index: 1000;
+.content-container {
+  margin: 60px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #95939a;
+}
+
+h3 {
+  font-size: 22px;
+  font-family: "Open Sans" sans-serif;
+  margin-top: 80px;
+  color: black;
+}
+
+.experience {
+  display: flex;
+  font-size: 12px;
+}
+
+.experience-box {
+  margin-right: 50px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: black;
+}
+
+.num {
+  border: solid 0.5px #e8e8e8;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  margin-bottom: 5px;
 }
