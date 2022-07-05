@@ -91,6 +91,12 @@ h2 {
   background-image: url(../Photos/second-page.png);
 }
 
+.page-3 {
+  width: 923px;
+  height: 1080px;
+  background-image: url(../Photos/third-page.png);
+}
+
 .description {
   font-family: "Nunito", sans-serif;
   font-style: italic;
@@ -101,7 +107,7 @@ h2 {
 
 .quotation {
   margin-top: 250px;
-  margin-left: 130px;
+  margin-left: 90px;
 }
 
 .page-name {
@@ -215,6 +221,7 @@ h3 {
   height: 70px;
   padding: 6px;
   margin-left: 400px;
+  margin-bottom: 10px;
   background-color: ghostwhite;
   border: #e5e6e8;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -234,4 +241,9 @@ h3 {
 
 .hidden {
   display: none;
+}
+
+.description-third {
+  color: #093f68;
+  margin: 20px 300px;
 }

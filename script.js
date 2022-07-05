@@ -12,7 +12,7 @@ const modalSecond = document.querySelector(".second");
 
 //---VALIDATION OF PERSONAL INFORMATION---
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  //event.preventDefault();
 
   //USERNAME
   if (userName.value.trim() === "" || userName.value.trim().length < 3) {
