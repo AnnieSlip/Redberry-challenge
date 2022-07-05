@@ -247,3 +247,11 @@ h3 {
   color: #093f68;
   margin: 20px 300px;
 }
+
+.radio-buttons {
+  color: #212529;
+}
+
+.radio-buttons p {
+  margin-bottom: 5px;
+}
