@@ -1,28 +1,42 @@
 "use strict";
+
 const form = document.querySelector("#personal-info-form");
 const userName = document.querySelector("#name");
 const email = document.querySelector("#email");
 const date = document.querySelector("#date");
 const phone = document.querySelector("#phone");
-const input = document.querySelector(".input");
+const input = document.querySelector(".input-group");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  validateForm();
+  //USERNAME
+  if (userName.value.trim() === "" || userName.value.trim().length < 3) {
+    setError(userName);
+  } else {
+    setSuccess(userName);
+  }
+
+  //EMAIL
+  if (email.value.trim().includes("@redberry.ge")) {
+    setSuccess(email);
+  } else {
+    setError(email);
+  }
 });
 
-function validateForm() {
-  //Username
-  if (userName.value.trim() == " ") {
-    input.classList.add("error");
+function setError(element) {
+  const parent = element.parentElement;
+  if (parent.classList.contains("success")) {
+    parent.classList.remove("success");
   }
-  //Email
-  //date
-  //phone number
+  parent.classList.add("error");
 }
 
-function setError(element, errorMessage) {
+function setSuccess(element) {
   const parent = element.parentElement;
-  parent.classList.add("error");
+  if (parent.classList.contains("error")) {
+    parent.classList.remove("error");
+  }
+  parent.classList.add("success");
 }
