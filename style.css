@@ -208,3 +208,29 @@ h3 {
   border-radius: 8px;
   cursor: pointer;
 }
+
+.modal-window {
+  width: 320px;
+  height: 60px;
+  padding: 6px;
+  margin-left: 400px;
+  background-color: ghostwhite;
+  border: #e5e6e8;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 4px;
+}
+
+.modal-statement {
+  color: red;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #e5e6e8;
+}
+
+.modal-statement i {
+  margin-right: 3px;
+}
+
+.hidden {
+  display: none;
+}

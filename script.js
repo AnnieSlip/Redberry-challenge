@@ -7,6 +7,7 @@ const email = document.querySelector("#email");
 const date = document.querySelector("#date");
 const phone = document.querySelector("#phone");
 const input = document.querySelector(".input-group");
+const modal = document.querySelector(".modal-window");
 
 //---VALIDATION OF PERSONAL INFORMATION---
 form.addEventListener("submit", (event) => {
@@ -15,7 +16,9 @@ form.addEventListener("submit", (event) => {
   //USERNAME
   if (userName.value.trim() === "" || userName.value.trim().length < 3) {
     setError(userName);
+    modal.classList.remove("hidden");
   } else {
+    modal.classList.add("hidden");
     setSuccess(userName);
   }
 
