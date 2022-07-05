@@ -178,6 +178,7 @@ h3 {
 }
 .form {
   margin-top: 60px;
+  position: relative;
 }
 
 .error input {
@@ -199,8 +200,8 @@ h3 {
 
 .btn {
   position: absolute;
-  top: 775px;
-  right: -70px;
+  top: 360px;
+  right: 270px;
   width: 100px;
   height: 45px;
   background-color: #212529;
@@ -211,7 +212,7 @@ h3 {
 
 .modal-window {
   width: 320px;
-  height: 60px;
+  height: 70px;
   padding: 6px;
   margin-left: 400px;
   background-color: ghostwhite;

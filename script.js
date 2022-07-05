@@ -7,7 +7,8 @@ const email = document.querySelector("#email");
 const date = document.querySelector("#date");
 const phone = document.querySelector("#phone");
 const input = document.querySelector(".input-group");
-const modal = document.querySelector(".modal-window");
+const modal = document.querySelector(".first");
+const modalSecond = document.querySelector(".second");
 
 //---VALIDATION OF PERSONAL INFORMATION---
 form.addEventListener("submit", (event) => {
@@ -25,8 +26,10 @@ form.addEventListener("submit", (event) => {
   //EMAIL
   if (isEmailValid(email.value)) {
     setSuccess(email);
+    modalSecond.classList.add("hidden");
   } else {
     setError(email);
+    modalSecond.classList.remove("hidden");
   }
 
   //phone
