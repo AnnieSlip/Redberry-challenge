@@ -36,8 +36,14 @@ h1 {
 
 .open-msg {
   margin-top: 265px;
+  position: relative;
 }
-
+.open-msg p {
+  font-weight: 600;
+  font-size: 28px;
+  position: absolute;
+  margin-top: 20px;
+}
 .content {
   width: 997px;
 }
@@ -250,8 +256,20 @@ h3 {
 
 .radio-buttons {
   color: #212529;
+  margin-top: 70px;
 }
 
 .radio-buttons p {
   margin-bottom: 5px;
+}
+
+.list-1 select {
+  width: 350px;
+  height: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  border: none;
+}
+
+.chess-experience-form {
+  margin-top: 70px;
 }
