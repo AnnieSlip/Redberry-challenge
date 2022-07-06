@@ -264,6 +264,7 @@ h3 {
 }
 
 .list-1 select {
+  margin-right: 150px;
   width: 350px;
   height: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
@@ -271,5 +272,13 @@ h3 {
 }
 
 .chess-experience-form {
+  margin-top: 70px;
+}
+
+.form-container {
+  display: flex;
+}
+
+.list-2 {
   margin-top: 70px;
 }
