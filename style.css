@@ -286,3 +286,25 @@ h3 {
   top: 310px;
   left: 550px;
 }
+
+#second-back {
+  margin-left: 60px;
+}
+
+#final-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#final-img {
+  width: 250px;
+  height: auto;
+}
+
+#final-content p {
+  font-family: "Nunito";
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 10px;
+}
