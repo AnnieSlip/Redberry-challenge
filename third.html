@@ -19,95 +19,116 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
- 
- <!--THIRD page of the App-->
- 
- <div class="page">
+
+  <!--THIRD page of the App-->
+
+  <div class="page">
     <div class="img-box page-3">
       <header>
         <img class="header-img" src="/Photos/Vector.svg" />
         <img class="header-img" src="/Photos/Redberry Knight Cup.svg" />
       </header>
       <div class="quotation">
-        <h2>"MANY HAVE BECOME CHESS MASTERS; <br />NO ONE HAS BECOME THE MASTER OF CHESS"</h2>
+        <h2>
+          "MANY HAVE BECOME CHESS MASTERS; <br />NO ONE HAS BECOME THE MASTER OF
+          CHESS"
+        </h2>
         <p class="description-third">-SIEGBERT TARRASCH</p>
       </div>
     </div>
     <div class="content">
-      <div class="page-name">First Step Is Done, Continue To Finish Onboarding Creating</div>
-<div class="content-container">
-      <div class="experience">
-        <div class="experience-box">
-        <p class="num">1</p>
-        <p>Personal Information</p>
-        </div>
-        <div class="experience-box">
+      <div class="page-name">
+        First Step Is Done, Continue To Finish Onboarding Creating
+      </div>
+      <div class="content-container">
+        <div class="experience">
+          <div class="experience-box">
+            <p class="num">1</p>
+            <p>Personal Information</p>
+          </div>
+          <div class="experience-box">
             <p class="num">2</p>
             <p>Chess Experience</p>
+          </div>
         </div>
-      </div>
 
-      
+        <h3>Chess Experience</h3>
+        <p>This is Basic Information Fields</p>
 
-      <h3>Chess Experience</h3>
-      <p>This is Basic Information Fields</p>
-
-      <div class="form-container">
+        <div class="form-container">
 
        
-      <form class="chess-experience-form">
-        <div class="list-1">
-            <select name="knowledgeLevel">
-                <option value="">Level of knowledge</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="professional">Professional</option>
-            </select>
-            </div>
-      </form>
-
-      <form class="chess-experience-form">
-        <div class="list-1">
-            <select name="chess-experience">
-                <option value="">Choose your character*</option>
-
-                <option id="list"value=""></option>
-                
-               
-            </select>
-            </div>
-      </form>
-
-
+            <form class="chess-experience-form">
+              <div class="first-box">
+              <div class="list-1">
+                 
+                  <select name="knowledgeLevel">
+                      <option value="">Level of knowledge</option>
+                      <option value="beginner">Beginner</option>
+                      <option value="intermediate">Intermediate</option>
+                      <option value="professional">Professional</option>
+                  </select>
+                  </div>
+                  
+                      <div class="radio-buttons">
+                          <p>Have you participated in Redberry Championship?*</p>
+                          
+                          <input type="radio" id="yes" id="rad1" name="select" value="yes">
+                          <label for="rad1">Yes</label>
+                          
+                          <input type="radio" id="no" id="rad2" name="select" value="no">
+                          <label for="rad2">No</label>
+                        </div>
+                        </div>
+           
       
-      </div>
-
-    
-      </div>
-
-      <div class="radio-buttons">
-        <p>Have you participated in Redberry Championship?*</p>
-        
-        <input type="radio" id="yes" id="rad1" name="select" value="yes">
-        <label for="rad1">Yes</label>
-        
-        <input type="radio" id="no" id="rad2" name="select" value="no">
-        <label for="rad2">No</label>
-      </div>
-    
-      <div class="buttons">
-        <div>
-        <a href="second.html" class="back">Back</a>
+            <div>
+              <div class="list-1">
+                  <select name="chess-experience">
+                      <option value="">Choose your character*</option>
+      
+                      <option id="list"value=""></option>
+                      
+                     
+                  </select>
+                  
+              </div>  
+            </div>
+            <button id="final-submit" class="btn" type="submit">Submit</button>
+            </form>
+      
+      
+            
+            </div>
+      
+          
+            </div>
+      
+           
+          
+            <div class="buttons">
+              <div>
+              <a href="second.html" class="back">Back</a>
+              </div>
+              
+              
+            </div>
+          </div>
+          </div>
         </div>
-        
-        
+      
+        <script src="third.js"></script>
+      </body>
+      </html>
       </div>
-    </div>
     </div>
   </div>
-
-  <script src="third.js"></script>
-</body>
 </html>

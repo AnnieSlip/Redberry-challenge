@@ -1,3 +1,5 @@
+//GET REQUEST
+
 fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
   .then((data) => {
     return data.json();
@@ -14,6 +16,9 @@ fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
     document.getElementById("list").innerHTML = data1;
   });
 
+//POST REQUEST
+
+//1. Select elements from first page
 const params = new URLSearchParams(window.location.search);
 
 console.log(params);

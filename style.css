@@ -273,12 +273,16 @@ h3 {
 
 .chess-experience-form {
   margin-top: 70px;
-}
-
-.form-container {
   display: flex;
+  position: relative;
 }
 
 .list-2 {
   margin-top: 70px;
+}
+
+#final-submit {
+  position: absolute;
+  top: 310px;
+  left: 550px;
 }
