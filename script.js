@@ -12,8 +12,6 @@ const modalSecond = document.querySelector(".second");
 
 //---VALIDATION OF PERSONAL INFORMATION---
 form.addEventListener("submit", (event) => {
-  //event.preventDefault();
-
   //USERNAME
   if (userName.value.trim() === "" || userName.value.trim().length < 3) {
     setError(userName);
@@ -45,7 +43,24 @@ form.addEventListener("submit", (event) => {
   } else {
     setSuccess(date);
   }
+
+  if (isFormValid() == true) {
+    form.submit();
+  } else {
+    event.preventDefault();
+  }
 });
+
+function isFormValid() {
+  const inputContainers = form.querySelectorAll(".input-group");
+  let result = true;
+  inputContainers.forEach((container) => {
+    if (container.classList.contains("error")) {
+      result = false;
+    }
+  });
+  return result;
+}
 
 function setError(element) {
   const parent = element.parentElement;

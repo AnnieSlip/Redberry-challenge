@@ -7,12 +7,23 @@ fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
     let data1 = "";
 
     completedata.map((values) => {
-      console.log(values);
-      data1 = `
-      <option class="grandmaster" value="0">${values.name} <img src=${values.image} alt="img" class="grandmasters-img"></option>`;
+      data1 = `<option id="list" value="0">${values.name}</option>
+    `;
     });
-    document.querySelector(".grandmaster").innerHTML = data1;
-  })
-  .catch((err) => {
-    console.log(err);
+
+    document.getElementById("list").innerHTML = data1;
   });
+
+const params = new URLSearchParams(window.location.search);
+
+console.log(params);
+
+let values = [];
+let keys = [];
+params.forEach((value, key) => {
+  keys.push(key);
+  values.push(value);
+});
+
+console.log(keys);
+console.log(values);
