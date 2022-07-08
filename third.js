@@ -1,6 +1,10 @@
 //GET REQUEST
 
 const form = document.querySelector(".chess-experience-form");
+const knowledgeLevel = document.querySelector("#level");
+const radioBtn = document.querySelector("#radio");
+const character = document.querySelector("#character");
+const modal = document.querySelector(".modal-window");
 
 fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
   .then((data) => {
@@ -56,6 +60,16 @@ form.addEventListener("submit", function (e) {
     .catch((err) => console.log(err));
 });
 
-function myfunction() {
-  window.open("final.html");
+function validation() {
+  //VALIDATION
+  if (
+    knowledgeLevel.value == "" ||
+    radioBtn.value == "" ||
+    character.value == " "
+  ) {
+    console.log("error");
+    modal.classList.remove("hidden");
+  } else {
+    window.open("final.html");
+  }
 }

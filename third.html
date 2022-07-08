@@ -63,6 +63,15 @@
         <h3>Chess Experience</h3>
         <p>This is Basic Information Fields</p>
 
+
+        <div class="modal-window hidden" >
+            <div class="modal-statement">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p>Some of the fields are empty</p>
+            </div>
+            <p>Please, fill every field</p>
+          </div>
+
         <div class="form-container">
 
        
@@ -70,7 +79,7 @@
               <div class="first-box">
               <div class="list-1">
                  
-                  <select name="experience_level">
+                  <select name="experience_level" id="level">
                       <option value="">Level of knowledge</option>
                       <option value="beginner">Beginner</option>
                       <option value="intermediate">Intermediate</option>
@@ -78,7 +87,7 @@
                   </select>
                   </div>
                   
-                      <div class="radio-buttons">
+                      <div class="radio-buttons" id="radio">
                           <p>Have you participated in Redberry Championship?*</p>
                           
                           <input type="radio" id="yes" id="rad1" name="already_participated" value="yes">
@@ -92,7 +101,7 @@
       
             <div>
               <div class="list-1">
-                  <select id="option1" name="character_id">
+                  <select id="option1" name="character_id" id="character">
                       <option value="">Choose your character*</option>
       
                       <option  value=""></option>
@@ -105,7 +114,7 @@
                   
               </div>  
             </div>
-            <button id="final-submit" class="btn" type="submit" onclick="myfunction()">Submit</button>
+            <button id="final-submit" class="btn" type="submit" onclick="validation()">Submit</button>
             </form>
       
       
