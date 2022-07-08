@@ -308,3 +308,7 @@ h3 {
   font-size: 32px;
   margin-top: 10px;
 }
+
+.checked {
+  background-color: rgb(209, 240, 209);
+}

@@ -9,6 +9,7 @@ const phone = document.querySelector("#phone");
 const input = document.querySelector(".input-group");
 const modal = document.querySelector(".first");
 const modalSecond = document.querySelector(".second");
+const number1 = document.querySelector(".num-1");
 
 //---VALIDATION OF PERSONAL INFORMATION---
 form.addEventListener("submit", (event) => {
@@ -44,8 +45,12 @@ form.addEventListener("submit", (event) => {
     setSuccess(date);
   }
 
+  const check = `${(<i class="fa-solid fa-check"></i>)}`;
+
   if (isFormValid() == true) {
     form.submit();
+    number1.classList.add("checked");
+    number1.textContent = check;
   } else {
     event.preventDefault();
   }
@@ -95,17 +100,5 @@ function isPhoneValid(phone) {
 
 //---END OF VALIDATION OF PERSONAL INFORMATION---
 
-fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
-  .then((data) => {
-    return data.json();
-  })
-  .then((completedata) => {
-    //console.log(completedata);
-    let data1 = "";
-    completedata.map((values) => {
-      data1 = ``;
-    });
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+//Prevent Refreshing
+console.log(localStorage);
