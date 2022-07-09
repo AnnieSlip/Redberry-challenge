@@ -5,6 +5,7 @@ const knowledgeLevel = document.querySelector("#level");
 const radioBtn = document.querySelector("#radio");
 const character = document.querySelector("#character");
 const modal = document.querySelector(".modal-window");
+const num = document.querySelector("#second-num");
 
 fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
   .then((data) => {
@@ -43,33 +44,57 @@ console.log(values);
 
 console.log(localStorage);
 
-//SENDING DATA TO AN API
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const payload = new FormData(form);
-  console.log([...payload]);
-
-  fetch("http://localhost:4444/api/register", {
-    method: "POST",
-    body: payload,
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
-});
-
+//Form Validation
 function validation() {
-  //VALIDATION
   if (
-    knowledgeLevel.value == "" ||
-    radioBtn.value == "" ||
-    character.value == " "
+    knowledgeLevel.value.trim() == "" ||
+    radioBtn.value.trim() == "" ||
+    character.value.trim() == ""
   ) {
-    console.log("error");
     modal.classList.remove("hidden");
   } else {
-    window.open("final.html");
+    location.href = "final.html";
   }
 }
+
+//SENDING DATA TO AN API
+
+form.addEventListener("submit", (e) => {
+  let [name, email, phone, date] = values;
+  const level = knowledgeLevel.value;
+  const id = character.value;
+  const participated = radioBtn.value;
+
+  //FETCH METHOD
+
+  fetch("https://chess-tournament-api.devtest.ge/api/register", {
+    method: "POST",
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      phone: phone,
+      date_of_birth: date,
+      experience_level: level,
+      already_participated: participated,
+      character_id: id,
+    }),
+    headers: { "Content-Type": "application/json; charset=UTF-8" },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  if (
+    knowledgeLevel.value.trim() !== "" &&
+    radioBtn.value.trim() !== "" &&
+    character.value.trim() !== ""
+  ) {
+    form.submit();
+  } else {
+    e.preventDefault();
+  }
+});

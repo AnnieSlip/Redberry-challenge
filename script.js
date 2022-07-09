@@ -45,8 +45,6 @@ form.addEventListener("submit", (event) => {
     setSuccess(date);
   }
 
-  const check = `${(<i class="fa-solid fa-check"></i>)}`;
-
   if (isFormValid() == true) {
     form.submit();
     number1.classList.add("checked");
