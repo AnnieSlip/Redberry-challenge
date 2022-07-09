@@ -27,7 +27,7 @@ fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
 
 //POST REQUEST
 
-//1. Select elements from first page
+//1. Select DATA  from first page
 const params = new URLSearchParams(window.location.search);
 
 console.log(params);
@@ -45,21 +45,12 @@ console.log(values);
 console.log(localStorage);
 
 //Form Validation
-function validation() {
-  if (
-    knowledgeLevel.value.trim() == "" ||
-    radioBtn.value.trim() == "" ||
-    character.value.trim() == ""
-  ) {
-    modal.classList.remove("hidden");
-  } else {
-    location.href = "final.html";
-  }
-}
 
 //SENDING DATA TO AN API
 
 form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   let [name, email, phone, date] = values;
   const level = knowledgeLevel.value;
   const id = character.value;
@@ -67,34 +58,62 @@ form.addEventListener("submit", (e) => {
 
   //FETCH METHOD
 
-  fetch("https://chess-tournament-api.devtest.ge/api/register", {
-    method: "POST",
-    body: JSON.stringify({
-      name: name,
-      email: email,
-      phone: phone,
-      date_of_birth: date,
-      experience_level: level,
-      already_participated: participated,
-      character_id: id,
-    }),
-    headers: { "Content-Type": "application/json; charset=UTF-8" },
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-
   if (
-    knowledgeLevel.value.trim() !== "" &&
-    radioBtn.value.trim() !== "" &&
-    character.value.trim() !== ""
+    knowledgeLevel.value == "" ||
+    radioBtn.value == "" ||
+    character.value == ""
   ) {
-    form.submit();
+    console.log("error");
+    modal.classList.remove("hidden");
+    character.classList.add("error2");
+    knowledgeLevel.classList.add("error2");
   } else {
-    e.preventDefault();
+    //1. OPEN FINAL PAGE
+    window.open = "/final.html";
+    //2.REMOVE ERROR CLASSES
+    modal.classList.add("hidden");
+    character.classList.remove("error");
+    knowledgeLevel.classList.remove("error");
+
+    //SEND DATA TO API
+    fetch("https://chess-tournament-api.devtest.ge/api/register", {
+      method: "POST",
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        phone: phone,
+        date_of_birth: date,
+        experience_level: level,
+        already_participated: participated,
+        character_id: id,
+      }),
+      headers: { "Content-Type": "application/json; charset=UTF-8" },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    form.submit();
   }
 });
+
+function validation() {
+  if (
+    knowledgeLevel.value == "" ||
+    radioBtn.value == "" ||
+    character.value == ""
+  ) {
+    modal.classList.remove("hidden");
+    document.getElementById("level").classList.add("error2");
+    document.getElementById("option1").classList.add("error2");
+  } else {
+    window.open = "final.html";
+    modal.classList.add("hidden");
+    document.getElementById("level").classList.remove("error2");
+    document.getElementById("option1").classList.remove("error2");
+  }
+}
