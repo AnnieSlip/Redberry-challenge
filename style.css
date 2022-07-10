@@ -30,7 +30,7 @@ header {
 h1 {
   color: #ffffff;
   font-size: 80px;
-  font-weight: 800;
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -40,10 +40,10 @@ h1 {
 }
 
 .open-msg p {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 28px;
   position: absolute;
-  left: 610px;
+  left: 550px;
   top: 43px;
 }
 .content {
