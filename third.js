@@ -7,6 +7,8 @@ const character = document.querySelector("#character");
 const modal = document.querySelector(".modal-window");
 const num = document.querySelector("#second-num");
 
+//GET REQUEST
+
 fetch("https://chess-tournament-api.devtest.ge/api/grandmasters")
   .then((data) => {
     return data.json();
@@ -43,8 +45,6 @@ console.log(keys);
 console.log(values);
 
 console.log(localStorage);
-
-//Form Validation
 
 //SENDING DATA TO AN API
 

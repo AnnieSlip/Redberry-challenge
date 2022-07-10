@@ -10,7 +10,8 @@ const input = document.querySelector(".input-group");
 const modal = document.querySelector(".first");
 const modalSecond = document.querySelector(".second");
 const number1 = document.querySelector(".num-1");
-
+const modalBtn1 = document.getElementById("first-btn");
+const modalBtn2 = document.getElementById("second-btn");
 //---VALIDATION OF PERSONAL INFORMATION---
 form.addEventListener("submit", (event) => {
   //USERNAME
@@ -100,3 +101,20 @@ function isPhoneValid(phone) {
 
 //Prevent Refreshing
 console.log(localStorage);
+
+const btn = document.getElementById("submit");
+
+btn.addEventListener("click", function () {
+  localStorage.setItem("name", userName.value);
+  localStorage.setItem("email", email.value);
+  localStorage.setItem("phone", phone.value);
+  localStorage.setItem("data", date.value);
+});
+
+modalBtn1.addEventListener("click", function () {
+  modal.classList.add("hidden");
+});
+
+modalBtn2.addEventListener("click", function () {
+  modalSecond.classList.add("hidden");
+});
