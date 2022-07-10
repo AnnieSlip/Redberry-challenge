@@ -48,6 +48,7 @@ form.addEventListener("submit", (event) => {
 
   if (isFormValid() == true) {
     form.submit();
+    window.localStorage.clear();
     number1.classList.add("checked");
     number1.textContent = check;
   } else {
