@@ -102,13 +102,25 @@ function isPhoneValid(phone) {
 //Prevent Refreshing
 console.log(localStorage);
 
-const btn = document.getElementById("submit");
+email.addEventListener("keyup", display);
+userName.addEventListener("keyup", display);
+phone.addEventListener("keyup", display);
+date.addEventListener("keyup", display);
+
+function display() {
+  localStorage.setItem("name", userName.value);
+  localStorage.setItem("phone", phone.value);
+  localStorage.setItem("date", date.value);
+  localStorage.setItem("email", email.value);
+}
+
+userName.value = localStorage.getItem("name");
+phone.value = localStorage.getItem("phone");
+date.value = localStorage.getItem("date");
+email.value = localStorage.getItem("email");
 
 btn.addEventListener("click", function () {
-  localStorage.setItem("name", userName.value);
-  localStorage.setItem("email", email.value);
-  localStorage.setItem("phone", phone.value);
-  localStorage.setItem("data", date.value);
+  localStorage.clear();
 });
 
 modalBtn1.addEventListener("click", function () {
